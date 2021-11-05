@@ -1,0 +1,175 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="br.edu.unicid.bean.Categoria" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brinquedolândia</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+	</style>
+</head>
+<body>
+    <header> <!--Cabeçalho-->
+        <div id="banner">
+            <h1 class="titulo1">Logo</h1>
+
+            <h1 id="titulo2" style="margin-left: 160px;">Brinquedolândia</h1>
+
+            <div id="areaAdmin">
+                <h3 style="margin-top: 5px;">Área Administrativa</h3>
+                <h4 style="align-self: flex-start; padding: 0px 5px;">Login:</h4>
+                <h4 style="align-self: flex-start; padding: 0px 5px;">Senha:</h4>
+                <a href="areaAdmin.jsp"><input class="botao" type="button" value="Acessar" style="font-size: 12px; padding: 4px 5px;"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="limpar"></div>
+
+    <main> <!--Conteúdo-->
+        <div id="areaMainContainer">
+            <div id="latEsquerda">
+            	<!-- Aqui eu precisarei importar o java.util.List e ArrayList e java bean Categoria, precisarei criar uma lista para percorrer apenas os nomes. -->
+                <h2>Categorias</h2>
+            </div>        
+
+            <div id="areaContainer"> <!--Área de Conteúdo-->
+                <h2>Área de Conteúdo</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer> <!--Rodapé-->
+        <div id="rodape">
+            <h2 style="color: white">Rodapé</h2>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
+--- CSS ---
+
+@charset "ISO-8859-1";
+* {
+    margin: 0; padding: 0; box-sizing: border-box; color: black; font-family: 'Lato';
+}
+
+ul {list-style: none;}
+
+a{text-decoration: none; cursor: pointer; opacity: 0.9;}
+
+html {
+    font-size: 67.5%;
+    background-color: rgb(61, 28, 24);
+}
+
+/*Área header*/
+
+#color1{
+    border: 1px solid black;
+    color: blue;
+}
+
+#banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: rgba(18, 46, 98, 0.931);
+    width: 100%;
+    height: 15.0rem;
+    font-size: 1.8rem;
+}
+
+#areaAdmin{
+    display: flex;
+    padding: 5px 0px;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    background-color: rgb(141, 176, 242);
+    width: 250px;
+}
+
+
+/*Área main*/
+
+#areaMainContainer {
+    margin: auto;
+    border: 1px solid orange;
+    width: 96%;
+    padding: 10px 0px; /*Padding topo baixo / laterais */
+    height: 740px;
+}
+
+#latEsquerda{
+    display: flex;
+    border-radius: 10px;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    background-color: rgb(141, 176, 242);
+    width: 15%;
+    height: 100%;
+}
+
+#areaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid purple;
+    border-radius: 10px;
+    width: 83%;
+    background-color: rgb(141, 176, 242);
+    height: 100%;
+
+    float: right;
+}
+
+.container {
+    background-color: burlywood;
+    font-size: 1.8rem;
+}
+
+#rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    float: left;
+    width: 100%;
+    height: 77px;
+}
+
+
+/*Títulos e botões*/
+.titulo1{
+    border: 1px solid red;
+}
+
+#titulo2 {
+	font-family: 'Patrick Hand', cursive;
+	font-size: 3.8rem;
+	color: white;
+}
+
+.botao {
+    color: black;
+}
+
+.limpar{
+    clear: both;
+}
